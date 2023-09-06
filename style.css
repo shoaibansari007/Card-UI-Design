@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+}
+body{
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: linear-gradient(45deg,#ffaf00,#bb02ff);
+}
+.main-container{
+    display: flex;
+    width:1600px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+}
+.main-container .card{
+    position: relative;
+    width: 240px;
+    height: 340px;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+    transition: 0.5s;
+}
+.main-container .card .circle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(130px at center 0);
+}
+.main-container .card .circle H2{
+    color: #fff;
+    position: absolute;
+    top: 30px;
+    left: 80px;
+    font-size: 4em;
+}
+.main-container .card .description{
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    text-align: center;
+}
+.main-container .card .description .read-more {
+    margin: 10px 0;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 50px;
+    color: #fff;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+.main-container .card:nth-child(1) .circle,
+.main-container .card:nth-child(1) .description .read-more{
+background: #ffaf00;
+}
+.main-container .card:nth-child(2) .circle,
+.main-container .card:nth-child(2) .description .read-more{
+background: #da226a;
+}
+.main-container .card:nth-child(3) .circle,
+.main-container .card:nth-child(3) .description .read-more{
+background: #bb02ff;
+}
+.main-container .card:nth-child(1){
+background: #f6d58d;
+}
+.main-container .card:nth-child(2){
+background: #fb9bc0;
+}
+.main-container .card:nth-child(3){
+background: #de93f9;
+}
+
+
+/* -----BLur---- */
+.main-container:hover .card{
+    filter: blur(20px);
+    transform: scale(0.8);
+    opacity: 0.9;
+}
+.main-container .card:hover{
+    filter: blur(0px);
+    transform: scale(1.1);
+    opacity: 1;
+}
